@@ -1,0 +1,30 @@
+\begin{table}[!htb]
+\centering
+\caption{\textbf{Excess harm of compression beyond ordinary retraining noise, pooled over the 11 datasets.} Excess: change of the compressed classifier relative to its reference, minus the mean change of three independently retrained copies of the reference, on the same test patients; 10\% validation-selected alert budget. Pooled: DerSimonian--Laird random effects over per-dataset means (Nadeau--Bengio standard errors). PI: prediction interval for a new dataset. Datasets $>0$: datasets with a positive excess of newly missed positives and one-sided sign-test $p$-value. Net TP lost: newly missed minus recovered positives. Storage: serialized size relative to the reference (Diabetes 130). Positive excess $\Delta$MCC values indicate a better MCC than retraining.}
+\label{tab:META}
+{\small
+\begin{tabular}{lccccc}
+\toprule
+ & & \multicolumn{4}{c}{Excess newly missed positives per 100 events} \\
+\cmidrule(l){3-6}
+Compressed classifier & Storage & Pooled [95\% CI] & 95\% PI & $I^2$ & Datasets $>0$ ($p$) \\
+\midrule
+RF 128$\rightarrow$16, thinned & 12.4\% & +2.75 [+1.57, +3.94] & [$-$0.26, +5.77] & 61\% & 11/11 ($<$0.001) \\
+RF 16, trained directly & 12.4\% & +3.78 [+2.24, +5.32] & [$-$0.63, +8.18] & 74\% & 11/11 ($<$0.001) \\
+GBM 400$\rightarrow$100, truncated & 25.3\% & $-$0.05 [$-$0.46, +0.36] & [$-$0.52, +0.42] & 0\% & 6/11 (0.500) \\
+GBM small, trained directly & 7.0\% & +1.44 [+1.07, +1.80] & [+1.01, +1.86] & 0\% & 9/11 (0.033) \\
+\bottomrule
+\end{tabular}
+\par\vspace{1.2em}
+\begin{tabular}{lcc}
+\toprule
+Compressed classifier & Excess net TP lost [95\% CI] & Excess $\Delta$MCC [95\% CI] \\
+\midrule
+RF 128$\rightarrow$16, thinned & +1.11 [+0.10, +2.12] & $-$0.017 [$-$0.029, $-$0.004] \\
+RF 16, trained directly & +1.40 [+0.23, +2.58] & $-$0.019 [$-$0.033, $-$0.005] \\
+GBM 400$\rightarrow$100, truncated & $-$0.88 [$-$1.91, +0.15] & +0.010 [+0.002, +0.017] \\
+GBM small, trained directly & $-$1.54 [$-$3.08, +0.00] & +0.012 [+0.003, +0.021] \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

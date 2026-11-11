@@ -1,0 +1,25 @@
+\rowcolors{2}{white}{LightGreen}
+\begin{table}[!htb]
+\centering
+\caption{\textbf{Datasets.} \#samples: patients or hospital stays. \#variables: clinical variables used as predictors (outcome excluded; for the PhysioNet datasets, the last and the mean value of each clinical variable). \#missing elements: missing values among the predictors (percentage of all predictor values). Release year: year of publication of the reference article. PhysioNet 2019 A$\rightarrow$B: models trained on hospital system A and tested on hospital system B.}
+\label{tab:DATASETS}
+{\small
+\begin{tabularx}{\textwidth}{lrrrcc>{\raggedright\arraybackslash}X}
+\toprule
+\rowcolor{white}Dataset name & \#samples & \#variables & \shortstack{\#missing\\elements} & Reference & \shortstack{Release\\year} & City, region, country \\
+\midrule
+Sepsis survival & 110{,}341 & 3 & 0 (0.0\%) & \cite{chicco2020sepsis} & 2020 & Norway (nationwide) \\
+Diabetes 130 & 99{,}343 & 18 & 178{,}937 (10.0\%) & \cite{strack2014impact} & 2014 & 130 hospitals, USA \\
+PhysioNet 2019 A$\rightarrow$B & 39{,}317 & 78 & 1{,}713{,}454 (55.9\%) & \cite{reyna2020early} & 2020 & Boston, Massachusetts (A); Atlanta, Georgia (B); USA \\
+SUPPORT2 & 9{,}105 & 29 & 29{,}241 (11.1\%) & \cite{knaus1995support} & 1995 & five medical centers, USA \\
+PhysioNet 2012 & 8{,}000 & 80 & 172{,}134 (26.9\%) & \cite{silva2012predicting} & 2012 & Boston, Massachusetts, USA \\
+Sepsis/SIRS ICU & 1{,}257 & 14 & 2 ($<$0.1\%) & \cite{gucyetmez2016c} & 2016 & Istanbul, Turkey \\
+CKD (UAE) & 491 & 22 & 21 (0.2\%) & \cite{alshamsi2018chronic} & 2018 & Al Ain, Abu Dhabi, UAE \\
+Depression \& heart failure & 425 & 11 & 0 (0.0\%) & \cite{jani2016comorbid} & 2016 & Olmsted County area, Minnesota, USA \\
+Cardiac arrest (Spain) & 422 & 9 & 7 (0.2\%) & \cite{requena2017mortality} & 2017 & Alicante, Valencian Community, Spain \\
+Heart failure & 299 & 11 & 0 (0.0\%) & \cite{ahmad2017survival} & 2017 & Faisalabad, Punjab, Pakistan \\
+Lung cancer ICU & 264 & 65 & 632 (3.7\%) & \cite{song2019effect} & 2019 & Seongnam, Gyeonggi, South Korea \\
+\bottomrule
+\end{tabularx}
+}
+\end{table}

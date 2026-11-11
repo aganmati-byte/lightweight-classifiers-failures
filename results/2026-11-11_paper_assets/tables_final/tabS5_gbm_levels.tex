@@ -1,0 +1,32 @@
+\begin{table}[!htb]
+\centering
+\caption{\textbf{Dose--response of gradient-boosting truncation, pooled over the 11 datasets.} The 400-round reference model is truncated after training to its first 200, 100, 50, 25 and 10 boosting rounds; 10\% validation-selected alert budget. Same quantities and methods as \autoref{tab:META}. Storage: serialized size relative to the reference (Diabetes 130). Truncation to 50 rounds has the same storage as the forest thinned to 16 trees (12.4\%).}
+\label{tab:GBM-LEVELS}
+{\small
+\begin{tabular}{lccccc}
+\toprule
+ & & \multicolumn{4}{c}{Excess newly missed positives per 100 events} \\
+\cmidrule(l){3-6}
+\rowcolor{white}Rounds kept & Storage & Pooled [95\% CI] & 95\% PI & $I^2$ & Datasets $>0$ ($p$) \\
+\midrule
+200 & 50.2\% & $-$1.00 [$-$1.30, $-$0.70] & [$-$1.35, $-$0.65] & 0\% & 3/11 (0.967) \\
+100 & 25.3\% & $-$0.05 [$-$0.46, +0.36] & [$-$0.52, +0.42] & 0\% & 6/11 (0.500) \\
+50 & 12.9\% & +0.76 [+0.41, +1.11] & [+0.35, +1.16] & 0\% & 10/11 (0.006) \\
+25 & 6.6\% & +1.68 [+0.92, +2.44] & [+0.19, +3.17] & 19\% & 10/11 (0.006) \\
+10 & 2.8\% & +2.97 [+1.66, +4.28] & [$-$0.37, +6.31] & 52\% & 11/11 ($<$0.001) \\
+\bottomrule
+\end{tabular}
+\par\vspace{1.2em}
+\begin{tabular}{lcc}
+\toprule
+Rounds kept & Excess net TP lost [95\% CI] & Excess $\Delta$MCC [95\% CI] \\
+\midrule
+200 & $-$0.36 [$-$0.77, +0.06] & +0.004 [+0.000, +0.007] \\
+100 & $-$0.88 [$-$1.91, +0.15] & +0.010 [+0.002, +0.017] \\
+50 & $-$0.69 [$-$1.60, +0.23] & +0.009 [+0.001, +0.017] \\
+25 & $-$0.47 [$-$1.05, +0.12] & +0.006 [$-$0.002, +0.015] \\
+10 & $-$0.34 [$-$1.19, +0.50] & +0.003 [$-$0.009, +0.016] \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

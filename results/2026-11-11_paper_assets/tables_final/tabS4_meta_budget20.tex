@@ -1,0 +1,31 @@
+\rowcolors{2}{white}{LightGreen}
+\begin{table}[!htb]
+\centering
+\caption{\textbf{Sensitivity analysis: 20\% alert budget.} Same quantities as \autoref{tab:META}, with every classifier alerting the 20\% of patients with the highest validation risk scores.}
+\label{tab:META-20}
+{\small
+\begin{tabular}{lccccc}
+\toprule
+ & & \multicolumn{4}{c}{Excess newly missed positives per 100 events} \\
+\cmidrule(l){3-6}
+\rowcolor{white}Compressed classifier & Storage & Pooled [95\% CI] & 95\% PI & $I^2$ & Datasets $>0$ ($p$) \\
+\midrule
+RF 128$\rightarrow$16, thinned & 12.4\% & +3.20 [+1.80, +4.60] & [$-$0.50, +6.90] & 62\% & 11/11 ($<$0.001) \\
+RF 16, trained directly & 12.4\% & +3.78 [+1.82, +5.74] & [$-$2.37, +9.93] & 86\% & 11/11 ($<$0.001) \\
+GBM 400$\rightarrow$100, truncated & 25.3\% & $-$0.04 [$-$0.46, +0.38] & [$-$0.52, +0.45] & 0\% & 7/11 (0.274) \\
+GBM 400$\rightarrow$50, truncated & 12.9\% & +1.12 [+0.30, +1.94] & [$-$0.65, +2.89] & 28\% & 8/11 (0.113) \\ GBM small, trained directly & 7.0\% & +1.60 [+1.09, +2.11] & [+0.93, +2.27] & 2\% & 9/11 (0.033) \\
+\bottomrule
+\end{tabular}
+\par\vspace{1.2em}
+\begin{tabular}{lcc}
+\toprule
+Compressed classifier & Excess net TP lost [95\% CI] & Excess $\Delta$MCC [95\% CI] \\
+\midrule
+RF 128$\rightarrow$16, thinned & +1.62 [+0.33, +2.92] & $-$0.018 [$-$0.031, $-$0.005] \\
+RF 16, trained directly & +1.51 [$-$0.04, +3.07] & $-$0.018 [$-$0.032, $-$0.004] \\
+GBM 400$\rightarrow$100, truncated & $-$0.81 [$-$1.59, $-$0.03] & +0.008 [+0.002, +0.013] \\
+GBM 400$\rightarrow$50, truncated & $-$1.20 [$-$2.57, +0.17] & +0.011 [+0.002, +0.019] \\ GBM small, trained directly & $-$1.54 [$-$3.06, $-$0.01] & +0.011 [+0.004, +0.018] \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

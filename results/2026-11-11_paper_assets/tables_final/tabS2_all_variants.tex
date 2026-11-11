@@ -1,0 +1,79 @@
+\rowcolors{2}{white}{LightGreen}
+{\scriptsize
+\begin{longtable}{lcccc}
+\caption{\textbf{Excess over retraining noise for every compressed classifier and dataset} (mean over splits [Nadeau--Bengio 95\% confidence interval], 10\% alert budget).}\label{tab:ALL-VARIANTS}\\
+\toprule
+Compressed classifier & \shortstack{Excess newly missed\\per 100 events} & \shortstack{Excess net TP lost\\per 100 events} & Excess $\Delta$MCC & Splits $>0$ \\
+\midrule
+\endfirsthead
+\toprule
+Compressed classifier & \shortstack{Excess newly missed\\per 100 events} & \shortstack{Excess net TP lost\\per 100 events} & Excess $\Delta$MCC & Splits $>0$ \\
+\midrule
+\endhead
+\multicolumn{5}{l}{\textbf{Sepsis survival}} \\*
+\quad RF 128$\rightarrow$16, thinned & +0.57 [$-$0.47, +1.60] & +0.00 [$-$0.88, +0.89] & $-$0.000 [$-$0.005, +0.004] & 24/30 \\
+\quad RF 16, trained directly & +0.87 [$-$0.16, +1.91] & +0.11 [$-$0.58, +0.79] & $-$0.001 [$-$0.004, +0.003] & 27/30 \\
+\quad GBM 400$\rightarrow$100, truncated & $-$0.49 [$-$1.98, +1.00] & $-$0.30 [$-$1.41, +0.81] & +0.002 [$-$0.003, +0.007] & 10/30 \\
+\quad GBM small, trained directly & +1.81 [+0.56, +3.06] & $-$0.66 [$-$2.33, +1.00] & +0.004 [$-$0.005, +0.012] & 28/30 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Diabetes 130}} \\*
+\quad RF 128$\rightarrow$16, thinned & +2.99 [+2.44, +3.53] & +1.67 [+0.89, +2.46] & $-$0.020 [$-$0.030, $-$0.011] & 30/30 \\
+\quad RF 16, trained directly & +4.01 [+3.32, +4.69] & +1.94 [+0.92, +2.96] & $-$0.022 [$-$0.033, $-$0.012] & 30/30 \\
+\quad GBM 400$\rightarrow$100, truncated & $-$0.08 [$-$0.59, +0.44] & $-$0.68 [$-$1.44, +0.08] & +0.009 [+0.002, +0.016] & 12/30 \\
+\quad GBM small, trained directly & +1.37 [+0.92, +1.82] & $-$0.60 [$-$1.38, +0.19] & +0.007 [$-$0.001, +0.015] & 30/30 \\
+\midrule
+\multicolumn{5}{l}{\textbf{PhysioNet 2019 A$\rightarrow$B}} \\*
+\quad RF 128$\rightarrow$16, thinned & +9.96 [+2.33, +17.59] & +11.10 [+0.46, +21.74] & $-$0.015 [$-$0.040, +0.011] & 30/30 \\
+\quad RF 16, trained directly & +11.55 [+4.59, +18.51] & +10.25 [+1.24, +19.27] & $-$0.014 [$-$0.037, +0.009] & 30/30 \\
+\quad GBM 400$\rightarrow$100, truncated & $-$1.98 [$-$4.98, +1.02] & $-$12.47 [$-$19.05, $-$5.88] & +0.035 [+0.017, +0.052] & 2/30 \\
+\quad GBM small, trained directly & $-$0.54 [$-$3.83, +2.76] & $-$17.32 [$-$24.75, $-$9.89] & +0.046 [+0.024, +0.067] & 8/30 \\
+\midrule
+\multicolumn{5}{l}{\textbf{SUPPORT2}} \\*
+\quad RF 128$\rightarrow$16, thinned & +2.72 [+1.34, +4.09] & +0.79 [$-$1.63, +3.22] & $-$0.021 [$-$0.042, $-$0.001] & 30/30 \\
+\quad RF 16, trained directly & +3.76 [+1.73, +5.78] & +1.70 [$-$0.85, +4.26] & $-$0.030 [$-$0.054, $-$0.005] & 30/30 \\
+\quad GBM 400$\rightarrow$100, truncated & +0.22 [$-$1.06, +1.50] & $-$0.44 [$-$2.16, +1.27] & +0.008 [$-$0.006, +0.022] & 15/30 \\
+\quad GBM small, trained directly & +1.72 [+0.42, +3.02] & $-$1.07 [$-$3.04, +0.90] & +0.013 [$-$0.002, +0.029] & 29/30 \\
+\midrule
+\multicolumn{5}{l}{\textbf{PhysioNet 2012}} \\*
+\quad RF 128$\rightarrow$16, thinned & +4.99 [+2.06, +7.93] & +3.76 [$-$0.82, +8.33] & $-$0.050 [$-$0.092, $-$0.009] & 29/30 \\
+\quad RF 16, trained directly & +6.04 [+3.24, +8.84] & +3.25 [$-$0.74, +7.24] & $-$0.048 [$-$0.086, $-$0.010] & 30/30 \\
+\quad GBM 400$\rightarrow$100, truncated & $-$0.28 [$-$2.29, +1.73] & $-$0.13 [$-$2.95, +2.70] & +0.000 [$-$0.022, +0.022] & 13/30 \\
+\quad GBM small, trained directly & +2.19 [$-$0.01, +4.39] & $-$0.53 [$-$4.08, +3.02] & $-$0.002 [$-$0.031, +0.027] & 25/30 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Sepsis/SIRS ICU}} \\*
+\quad RF 128$\rightarrow$16, thinned & +2.79 [$-$3.41, +8.98] & +0.76 [$-$8.27, +9.79] & $-$0.011 [$-$0.075, +0.052] & 30/50 \\
+\quad RF 16, trained directly & +3.95 [$-$1.73, +9.63] & +1.75 [$-$6.16, +9.66] & $-$0.025 [$-$0.083, +0.033] & 35/50 \\
+\quad GBM 400$\rightarrow$100, truncated & $-$0.79 [$-$5.99, +4.41] & $-$4.46 [$-$11.55, +2.63] & +0.045 [$-$0.014, +0.104] & 16/50 \\
+\quad GBM small, trained directly & $-$0.73 [$-$5.29, +3.84] & $-$4.74 [$-$12.71, +3.23] & +0.047 [$-$0.015, +0.108] & 18/50 \\
+\midrule
+\multicolumn{5}{l}{\textbf{CKD (UAE)}} \\*
+\quad RF 128$\rightarrow$16, thinned & +3.82 [$-$5.91, +13.56] & +4.57 [$-$7.94, +17.08] & $-$0.044 [$-$0.149, +0.060] & 22/50 \\
+\quad RF 16, trained directly & +5.36 [$-$4.06, +14.77] & +3.35 [$-$11.09, +17.80] & $-$0.037 [$-$0.153, +0.078] & 25/50 \\
+\quad GBM 400$\rightarrow$100, truncated & +0.73 [$-$5.99, +7.45] & $-$5.67 [$-$20.14, +8.79] & +0.041 [$-$0.079, +0.161] & 14/50 \\
+\quad GBM small, trained directly & +0.23 [$-$6.25, +6.72] & $-$4.91 [$-$18.26, +8.45] & +0.032 [$-$0.076, +0.140] & 11/50 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Depression \& heart failure}} \\*
+\quad RF 128$\rightarrow$16, thinned & +4.28 [$-$3.52, +12.07] & +2.91 [$-$7.45, +13.28] & $-$0.028 [$-$0.140, +0.083] & 29/50 \\
+\quad RF 16, trained directly & +4.50 [$-$3.76, +12.76] & +2.94 [$-$6.87, +12.74] & $-$0.061 [$-$0.172, +0.050] & 30/50 \\
+\quad GBM 400$\rightarrow$100, truncated & +1.58 [$-$4.31, +7.47] & $-$2.72 [$-$12.58, +7.14] & +0.037 [$-$0.076, +0.149] & 24/50 \\
+\quad GBM small, trained directly & +1.13 [$-$3.40, +5.66] & $-$3.35 [$-$13.14, +6.44] & +0.048 [$-$0.070, +0.166] & 20/50 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Cardiac arrest (Spain)}} \\*
+\quad RF 128$\rightarrow$16, thinned & +1.46 [$-$2.09, +5.01] & $-$0.45 [$-$6.53, +5.62] & $-$0.025 [$-$0.111, +0.060] & 28/50 \\
+\quad RF 16, trained directly & +2.00 [$-$1.17, +5.17] & $-$0.52 [$-$6.35, +5.31] & $-$0.010 [$-$0.086, +0.066] & 34/50 \\
+\quad GBM 400$\rightarrow$100, truncated & +1.49 [$-$1.12, +4.09] & $-$0.14 [$-$4.37, +4.08] & +0.000 [$-$0.049, +0.050] & 29/50 \\
+\quad GBM small, trained directly & +1.71 [$-$0.88, +4.29] & +0.12 [$-$4.01, +4.26] & $-$0.001 [$-$0.056, +0.053] & 33/50 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Heart failure}} \\*
+\quad RF 128$\rightarrow$16, thinned & +4.16 [$-$2.92, +11.24] & +1.04 [$-$10.28, +12.35] & $-$0.018 [$-$0.157, +0.121] & 27/50 \\
+\quad RF 16, trained directly & +4.44 [$-$2.53, +11.41] & +1.86 [$-$8.59, +12.31] & $-$0.003 [$-$0.149, +0.143] & 31/50 \\
+\quad GBM 400$\rightarrow$100, truncated & +1.31 [$-$3.85, +6.47] & $-$2.17 [$-$11.57, +7.23] & +0.018 [$-$0.094, +0.129] & 14/50 \\
+\quad GBM small, trained directly & +1.30 [$-$3.55, +6.16] & $-$1.81 [$-$10.07, +6.45] & +0.014 [$-$0.075, +0.103] & 14/50 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Lung cancer ICU}} \\*
+\quad RF 128$\rightarrow$16, thinned & +3.78 [$-$2.08, +9.64] & +1.54 [$-$7.74, +10.81] & $-$0.037 [$-$0.185, +0.112] & 34/50 \\
+\quad RF 16, trained directly & +3.40 [$-$1.97, +8.77] & $-$0.49 [$-$9.13, +8.16] & $-$0.001 [$-$0.127, +0.125] & 36/50 \\
+\quad GBM 400$\rightarrow$100, truncated & +3.38 [$-$2.54, +9.30] & +0.21 [$-$9.37, +9.79] & $-$0.023 [$-$0.162, +0.117] & 32/50 \\
+\quad GBM small, trained directly & +3.54 [$-$1.88, +8.97] & +1.04 [$-$7.92, +9.99] & $-$0.024 [$-$0.153, +0.106] & 36/50 \\
+\bottomrule
+\end{longtable}}

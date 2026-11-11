@@ -1,0 +1,122 @@
+{
+  "completed_utc": "2026-11-10T16:35:53.408529+00:00",
+  "config": {
+    "run_name": "EXCESS_TIERB_DAVIDE_20261110_R3",
+    "datasets": [
+      "cardiac_arrest_spain",
+      "depression_heart_failure",
+      "lung_cancer_icu",
+      "sepsis_sirs",
+      "ckd_uae",
+      "heart_failure_chicco"
+    ],
+    "n_splits": 50,
+    "n_retrain": 3,
+    "alert_budgets": [
+      0.1,
+      0.2
+    ],
+    "rf_parent": 128,
+    "rf_small": 16,
+    "gbm_parent": 400,
+    "gbm_small": 100,
+    "bootstrap": 500,
+    "gbm_backend": "lightgbm",
+    "targets": {
+      "cardiac_arrest_spain": [
+        "Exitus",
+        "1"
+      ],
+      "depression_heart_failure": [
+        "Death (1=Yes, 0=No)",
+        "1"
+      ],
+      "lung_cancer_icu": [
+        "Hospital_death",
+        "1"
+      ],
+      "sepsis_sirs": [
+        "Mortality",
+        "1"
+      ],
+      "ckd_uae": [
+        "EventCKD35",
+        "1"
+      ],
+      "heart_failure_chicco": [
+        "death_event",
+        "1"
+      ]
+    },
+    "protocol_version": "2026-11-10_tierB_v1"
+  },
+  "signature": "bbb621d1d030816d",
+  "data": {
+    "cardiac_arrest_spain": {
+      "dataset": "cardiac_arrest_spain",
+      "task": "Exitus = 1",
+      "n": 422,
+      "events": 337,
+      "prevalence": 0.7986,
+      "n_groups": 422,
+      "group": "one row per patient"
+    },
+    "depression_heart_failure": {
+      "dataset": "depression_heart_failure",
+      "task": "Death (1=Yes, 0=No) = 1",
+      "n": 425,
+      "events": 99,
+      "prevalence": 0.2329,
+      "n_groups": 425,
+      "group": "one row per patient"
+    },
+    "lung_cancer_icu": {
+      "dataset": "lung_cancer_icu",
+      "task": "Hospital_death = 1",
+      "n": 264,
+      "events": 160,
+      "prevalence": 0.6061,
+      "n_groups": 264,
+      "group": "one row per patient"
+    },
+    "sepsis_sirs": {
+      "dataset": "sepsis_sirs",
+      "task": "Mortality = 1",
+      "n": 1257,
+      "events": 129,
+      "prevalence": 0.1026,
+      "n_groups": 1257,
+      "group": "one row per patient"
+    },
+    "ckd_uae": {
+      "dataset": "ckd_uae",
+      "task": "EventCKD35 = 1",
+      "n": 491,
+      "events": 56,
+      "prevalence": 0.1141,
+      "n_groups": 491,
+      "group": "one row per patient"
+    },
+    "heart_failure_chicco": {
+      "dataset": "heart_failure_chicco",
+      "task": "death_event = 1",
+      "n": 299,
+      "events": 96,
+      "prevalence": 0.3211,
+      "n_groups": 299,
+      "group": "one row per patient"
+    }
+  },
+  "fetch_status": {
+    "cardiac_arrest_spain": "already present",
+    "depression_heart_failure": "already present",
+    "lung_cancer_icu": "already present",
+    "clinical_data_14201600": "already present",
+    "sepsis_icu_90day": "already present",
+    "sepsis_sirs": "already present",
+    "ckd_uae": "already present",
+    "mesothelioma": "FAILED: DatasetNotFoundError: \"Mesothelioma's disease data set \" dataset (id=351) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true",
+    "heart_failure_chicco": "already present",
+    "neuroblastoma_shanghai": "manual: PeerJ 6:e5665 supplemental files, put them in data/raw/davide/neuroblastoma_shanghai/"
+  }
+}

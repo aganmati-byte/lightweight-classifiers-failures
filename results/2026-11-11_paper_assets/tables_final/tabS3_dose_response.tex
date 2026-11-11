@@ -1,0 +1,47 @@
+\rowcolors{2}{white}{LightGreen}
+\begin{table}[!htb]
+\centering
+\caption{\textbf{Dose--response of forest thinning} (30 patient-grouped splits, 10\% alert budget). Trees kept from the 128-tree reference (storage relative to the reference). Expected / observed: newly missed positives per split predicted by the tree-sampling model and observed. ROC AUC: discrimination of the predicted per-patient flip probability for the patients whose decision changed.}
+\label{tab:DOSE}
+{\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+Thinned forest & Excess newly missed per 100 events & Excess $\Delta$MCC & Expected / observed & ROC AUC \\
+\midrule
+\multicolumn{5}{l}{\textbf{Sepsis survival}} \\*
+\quad 64 trees (50.0\%) & $-$0.63 [$-$1.74, +0.48] & +0.002 [$-$0.002, +0.006] & 19.7 / 11.9 & 0.989 \\
+\quad 32 trees (24.9\%) & $-$0.30 [$-$1.45, +0.86] & +0.002 [$-$0.002, +0.007] & 26.0 / 17.2 & 0.988 \\
+\quad 16 trees (12.5\%) & +0.16 [$-$0.94, +1.26] & +0.001 [$-$0.004, +0.005] & 32.6 / 24.7 & 0.982 \\
+\quad 8 trees (6.2\%) & +0.84 [$-$0.65, +2.34] & $-$0.000 [$-$0.005, +0.005] & 43.9 / 35.6 & 0.975 \\
+\quad 4 trees (3.1\%) & +1.83 [+0.55, +3.12] & $-$0.001 [$-$0.008, +0.005] & 59.9 / 51.7 & 0.969 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Diabetes 130}} \\*
+\quad 64 trees (50.0\%) & $-$1.19 [$-$1.61, $-$0.76] & $-$0.001 [$-$0.009, +0.007] & 63.9 / 63.0 & 0.962 \\
+\quad 32 trees (25.0\%) & +0.81 [+0.35, +1.26] & $-$0.010 [$-$0.017, $-$0.003] & 108.1 / 108.1 & 0.936 \\
+\quad 16 trees (12.4\%) & +2.99 [+2.44, +3.53] & $-$0.020 [$-$0.030, $-$0.011] & 156.2 / 157.7 & 0.909 \\
+\quad 8 trees (6.2\%) & +5.33 [+4.66, +5.99] & $-$0.036 [$-$0.046, $-$0.025] & 205.8 / 210.9 & 0.882 \\
+\quad 4 trees (3.1\%) & +7.61 [+6.85, +8.38] & $-$0.054 [$-$0.063, $-$0.046] & 252.3 / 262.8 & 0.856 \\
+\midrule
+\multicolumn{5}{l}{\textbf{PhysioNet 2019 A$\rightarrow$B}} \\*
+\quad 64 trees (50.4\%) & $-$0.36 [$-$4.96, +4.24] & $-$0.000 [$-$0.018, +0.018] & 8.0 / 8.0 & 0.934 \\
+\quad 32 trees (25.3\%) & +4.90 [$-$1.54, +11.35] & $-$0.006 [$-$0.029, +0.017] & 15.3 / 15.6 & 0.895 \\
+\quad 16 trees (12.7\%) & +9.96 [+2.33, +17.59] & $-$0.015 [$-$0.040, +0.011] & 23.5 / 22.9 & 0.856 \\
+\quad 8 trees (6.2\%) & +16.08 [+5.14, +27.01] & $-$0.018 [$-$0.042, +0.007] & 31.2 / 31.8 & 0.852 \\
+\quad 4 trees (3.1\%) & +20.61 [+9.35, +31.86] & $-$0.025 [$-$0.050, $-$0.001] & 35.6 / 38.4 & 0.846 \\
+\midrule
+\multicolumn{5}{l}{\textbf{SUPPORT2}} \\*
+\quad 64 trees (49.9\%) & $-$0.58 [$-$1.89, +0.73] & $-$0.002 [$-$0.020, +0.015] & 10.3 / 11.1 & 0.984 \\
+\quad 32 trees (24.9\%) & +0.95 [$-$0.36, +2.26] & $-$0.011 [$-$0.031, +0.009] & 18.3 / 18.4 & 0.972 \\
+\quad 16 trees (12.4\%) & +2.72 [+1.34, +4.09] & $-$0.021 [$-$0.042, $-$0.001] & 28.4 / 26.8 & 0.954 \\
+\quad 8 trees (6.2\%) & +5.50 [+3.91, +7.10] & $-$0.045 [$-$0.065, $-$0.024] & 42.7 / 40.0 & 0.938 \\
+\quad 4 trees (3.1\%) & +7.92 [+5.95, +9.89] & $-$0.071 [$-$0.095, $-$0.046] & 67.8 / 51.5 & 0.917 \\
+\midrule
+\multicolumn{5}{l}{\textbf{PhysioNet 2012}} \\*
+\quad 64 trees (50.1\%) & $-$0.84 [$-$2.47, +0.80] & $-$0.015 [$-$0.038, +0.008] & 7.8 / 8.2 & 0.974 \\
+\quad 32 trees (25.2\%) & +1.66 [$-$0.51, +3.83] & $-$0.025 [$-$0.054, +0.005] & 14.0 / 13.9 & 0.961 \\
+\quad 16 trees (12.6\%) & +4.99 [+2.06, +7.93] & $-$0.050 [$-$0.092, $-$0.009] & 21.2 / 21.4 & 0.943 \\
+\quad 8 trees (6.3\%) & +8.23 [+4.23, +12.23] & $-$0.080 [$-$0.133, $-$0.026] & 28.6 / 28.6 & 0.916 \\
+\quad 4 trees (3.2\%) & +12.61 [+9.13, +16.10] & $-$0.134 [$-$0.181, $-$0.088] & 40.4 / 38.5 & 0.898 \\
+\bottomrule
+\end{tabular}}
+\end{table}

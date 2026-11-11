@@ -1,0 +1,143 @@
+{
+  "completed_utc": "2026-11-10T18:03:48.630058+00:00",
+  "config": {
+    "run_name": "EXCESS_EXTENSION_20261110_R2",
+    "base_run": "EXCESS_REPLICATION_20261110_R1",
+    "base_signature": "4a8fe6a8fee2dbf5",
+    "new_datasets": [
+      "support2",
+      "sepsis_survival",
+      "physionet_2019_AtoB"
+    ],
+    "old_datasets": [
+      "physionet_2012",
+      "diabetes_130"
+    ],
+    "dose_trees": [
+      64,
+      32,
+      16,
+      8,
+      4
+    ],
+    "n_splits": 30,
+    "n_retrain": 3,
+    "alert_budgets": [
+      0.1,
+      0.2
+    ],
+    "rf_parent": 128,
+    "rf_small": 16,
+    "gbm_parent": 400,
+    "gbm_small": 100,
+    "bootstrap": 500,
+    "gbm_backend": "lightgbm",
+    "protocol_version": "2026-11-10_extension_v1"
+  },
+  "signature": "9214efb877c382b8",
+  "python": "3.13.18",
+  "sklearn": "1.6.1",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "data": {
+    "physionet_2012": {
+      "dataset": "PhysioNet/CinC Challenge 2012",
+      "task": "in-hospital mortality from first 48 h in ICU",
+      "sets_used": [
+        "a",
+        "b"
+      ],
+      "n_features": 80,
+      "group": "one ICU stay per record",
+      "n": 8000,
+      "events": 1122,
+      "prevalence": 0.1403,
+      "n_groups": 8000
+    },
+    "diabetes_130": {
+      "dataset": "UCI Diabetes 130-US Hospitals (296)",
+      "task": "30-day readmission at discharge",
+      "doi": "10.24432/C5230J",
+      "data_sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97",
+      "group": "patient_nbr",
+      "n": 99343,
+      "events": 11314,
+      "prevalence": 0.1139,
+      "n_groups": 69990
+    },
+    "support2": {
+      "dataset": "SUPPORT2 (UCI 880)",
+      "task": "in-hospital death; predictors from study entry / day 3",
+      "predictors": [
+        "age",
+        "sex",
+        "race",
+        "edu",
+        "income",
+        "num.co",
+        "diabetes",
+        "dementia",
+        "ca",
+        "dzgroup",
+        "dzclass",
+        "hday",
+        "scoma",
+        "sps",
+        "aps",
+        "meanbp",
+        "wblc",
+        "hrt",
+        "resp",
+        "temp",
+        "pafi",
+        "alb",
+        "bili",
+        "crea",
+        "sod",
+        "ph",
+        "glucose",
+        "bun",
+        "urine"
+      ],
+      "group": "one record per patient",
+      "n": 9105,
+      "events": 2360,
+      "prevalence": 0.2592,
+      "n_groups": 9105
+    },
+    "sepsis_survival": {
+      "dataset": "Sepsis Survival Minimal Clinical Records (UCI 827; Chicco & Jurman 2020)",
+      "task": "death during hospital stay from age, sex and episode number",
+      "predictors": [
+        "age_years",
+        "sex_0male_1female",
+        "episode_number"
+      ],
+      "group": "episode (NO patient identifier: episodes of one patient may be split)",
+      "n": 110341,
+      "events": 8129,
+      "prevalence": 0.0737,
+      "n_groups": 110341
+    },
+    "physionet_2019_AtoB": {
+      "dataset": "PhysioNet/CinC Challenge 2019",
+      "task": "sepsis label at fixed ICU hour 12; train on hospital A, test on hospital B",
+      "n_A": 19881,
+      "events_A": 331,
+      "n_B": 19436,
+      "events_B": 145,
+      "group": "one record per patient",
+      "note": "fixed external test set B; NB interval conservative",
+      "n": 39317,
+      "events": 476,
+      "prevalence": 0.0121,
+      "n_groups": 39317
+    }
+  },
+  "limits": [
+    "Sepsis Survival: no patient identifier, episode-level splits",
+    "PhysioNet 2019 A\u2192B: fixed external test set; NB interval conservative; alert rate on B differs from budget",
+    "Repeated splits re-use one cohort per dataset (correlated); NB-corrected intervals used",
+    "Alert budgets are illustrative, not clinically chosen"
+  ]
+}

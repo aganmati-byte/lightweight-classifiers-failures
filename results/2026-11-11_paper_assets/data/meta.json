@@ -1,0 +1,149 @@
+{
+ "physionet_2012": {
+  "dataset": "PhysioNet/CinC Challenge 2012",
+  "task": "in-hospital mortality from first 48 h in ICU",
+  "sets_used": [
+   "a",
+   "b"
+  ],
+  "n_features": 80,
+  "group": "one ICU stay per record",
+  "n": 8000,
+  "events": 1122,
+  "prevalence": 0.1403,
+  "n_groups": 8000
+ },
+ "diabetes_130": {
+  "dataset": "UCI Diabetes 130-US Hospitals (296)",
+  "task": "30-day readmission at discharge",
+  "doi": "10.24432/C5230J",
+  "data_sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97",
+  "group": "patient_nbr",
+  "n": 99343,
+  "events": 11314,
+  "prevalence": 0.1139,
+  "n_groups": 69990
+ },
+ "support2": {
+  "dataset": "SUPPORT2 (UCI 880)",
+  "task": "in-hospital death; predictors from study entry / day 3",
+  "predictors": [
+   "age",
+   "sex",
+   "race",
+   "edu",
+   "income",
+   "num.co",
+   "diabetes",
+   "dementia",
+   "ca",
+   "dzgroup",
+   "dzclass",
+   "hday",
+   "scoma",
+   "sps",
+   "aps",
+   "meanbp",
+   "wblc",
+   "hrt",
+   "resp",
+   "temp",
+   "pafi",
+   "alb",
+   "bili",
+   "crea",
+   "sod",
+   "ph",
+   "glucose",
+   "bun",
+   "urine"
+  ],
+  "group": "one record per patient",
+  "n": 9105,
+  "events": 2360,
+  "prevalence": 0.2592,
+  "n_groups": 9105
+ },
+ "sepsis_survival": {
+  "dataset": "Sepsis Survival Minimal Clinical Records (UCI 827; Chicco & Jurman 2020)",
+  "task": "death during hospital stay from age, sex and episode number",
+  "predictors": [
+   "age_years",
+   "sex_0male_1female",
+   "episode_number"
+  ],
+  "group": "episode (NO patient identifier: episodes of one patient may be split)",
+  "n": 110341,
+  "events": 8129,
+  "prevalence": 0.0737,
+  "n_groups": 110341
+ },
+ "physionet_2019_AtoB": {
+  "dataset": "PhysioNet/CinC Challenge 2019",
+  "task": "sepsis label at fixed ICU hour 12; train on hospital A, test on hospital B",
+  "n_A": 19881,
+  "events_A": 331,
+  "n_B": 19436,
+  "events_B": 145,
+  "group": "one record per patient",
+  "note": "fixed external test set B; NB interval conservative",
+  "n": 39317,
+  "events": 476,
+  "prevalence": 0.0121,
+  "n_groups": 39317
+ },
+ "cardiac_arrest_spain": {
+  "dataset": "cardiac_arrest_spain",
+  "task": "Exitus = 1",
+  "n": 422,
+  "events": 337,
+  "prevalence": 0.7986,
+  "n_groups": 422,
+  "group": "one row per patient"
+ },
+ "depression_heart_failure": {
+  "dataset": "depression_heart_failure",
+  "task": "Death (1=Yes, 0=No) = 1",
+  "n": 425,
+  "events": 99,
+  "prevalence": 0.2329,
+  "n_groups": 425,
+  "group": "one row per patient"
+ },
+ "lung_cancer_icu": {
+  "dataset": "lung_cancer_icu",
+  "task": "Hospital_death = 1",
+  "n": 264,
+  "events": 160,
+  "prevalence": 0.6061,
+  "n_groups": 264,
+  "group": "one row per patient"
+ },
+ "sepsis_sirs": {
+  "dataset": "sepsis_sirs",
+  "task": "Mortality = 1",
+  "n": 1257,
+  "events": 129,
+  "prevalence": 0.1026,
+  "n_groups": 1257,
+  "group": "one row per patient"
+ },
+ "ckd_uae": {
+  "dataset": "ckd_uae",
+  "task": "EventCKD35 = 1",
+  "n": 491,
+  "events": 56,
+  "prevalence": 0.1141,
+  "n_groups": 491,
+  "group": "one row per patient"
+ },
+ "heart_failure_chicco": {
+  "dataset": "heart_failure_chicco",
+  "task": "death_event = 1",
+  "n": 299,
+  "events": 96,
+  "prevalence": 0.3211,
+  "n_groups": 299,
+  "group": "one row per patient"
+ }
+}

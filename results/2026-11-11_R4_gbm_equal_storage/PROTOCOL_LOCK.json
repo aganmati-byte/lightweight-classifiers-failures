@@ -1,0 +1,50 @@
+{
+  "run_name": "GBM_EQUAL_STORAGE_20261111_R4",
+  "source_runs": [
+    "EXCESS_REPLICATION_20261110_R1",
+    "EXCESS_EXTENSION_20261110_R2",
+    "EXCESS_TIERB_DAVIDE_20261110_R3"
+  ],
+  "datasets": [
+    "physionet_2012",
+    "diabetes_130",
+    "support2",
+    "sepsis_survival",
+    "physionet_2019_AtoB",
+    "cardiac_arrest_spain",
+    "depression_heart_failure",
+    "lung_cancer_icu",
+    "sepsis_sirs",
+    "ckd_uae",
+    "heart_failure_chicco"
+  ],
+  "n_splits": {
+    "physionet_2012": 30,
+    "diabetes_130": 30,
+    "support2": 30,
+    "sepsis_survival": 30,
+    "physionet_2019_AtoB": 30,
+    "cardiac_arrest_spain": 50,
+    "depression_heart_failure": 50,
+    "lung_cancer_icu": 50,
+    "sepsis_sirs": 50,
+    "ckd_uae": 50,
+    "heart_failure_chicco": 50
+  },
+  "levels": [
+    200,
+    100,
+    50,
+    25,
+    10
+  ],
+  "gbm_parent": 400,
+  "n_retrain": 3,
+  "alert_budgets": [
+    0.1,
+    0.2
+  ],
+  "bootstrap": 500,
+  "gbm_backend": "lightgbm",
+  "protocol_version": "2026-11-11_gbm_equal_storage_v1"
+}

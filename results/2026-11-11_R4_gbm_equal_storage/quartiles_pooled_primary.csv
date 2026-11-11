@@ -1,0 +1,5 @@
+,retrained copies (mean of 3),truncated to 200,truncated to 100,truncated to 50,truncated to 25,truncated to 10
+Q1 closest to threshold,33.4,23.5,32.2,38.7,41.9,44.4
+Q2,10.5,4.2,9.5,14.9,19.1,24.8
+Q3,2.8,0.5,2.4,4.7,7.7,11.4
+Q4 furthest above,2.0,0.8,1.7,2.9,4.0,5.6

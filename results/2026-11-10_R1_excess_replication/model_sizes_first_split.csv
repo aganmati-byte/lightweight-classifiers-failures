@@ -1,0 +1,15 @@
+dataset,model,bytes,note
+diabetes_130,rf_parent,135036585,
+diabetes_130,rf_thinned,16811363,
+diabetes_130,rf_direct_small,16723097,
+diabetes_130,gbm_parent,1405878,
+diabetes_130,gbm_truncated,356078,text model size
+diabetes_130,gbm_direct_small,98037,
+diabetes_130,logistic,1146,
+physionet_2012,rf_parent,7425286,
+physionet_2012,rf_thinned,937885,
+physionet_2012,rf_direct_small,924339,
+physionet_2012,gbm_parent,1404705,
+physionet_2012,gbm_truncated,357173,text model size
+physionet_2012,gbm_direct_small,103374,
+physionet_2012,logistic,1962,

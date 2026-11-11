@@ -1,0 +1,26 @@
+{
+  "run_name": "EXCESS_REPLICATION_20261110_R1",
+  "quick_test": false,
+  "datasets": [
+    "physionet_2012",
+    "diabetes_130"
+  ],
+  "n_splits": 30,
+  "n_retrain": 3,
+  "alert_budgets": [
+    0.1,
+    0.2
+  ],
+  "rf_parent": 128,
+  "rf_small": 16,
+  "gbm_parent": 400,
+  "gbm_small": 100,
+  "bootstrap": 500,
+  "p2012_sets": [
+    "a",
+    "b"
+  ],
+  "gbm_backend": "lightgbm",
+  "split": "patient-grouped train 65% / validation 15% / test 20%",
+  "protocol_version": "2026-11-10_excess_v1"
+}

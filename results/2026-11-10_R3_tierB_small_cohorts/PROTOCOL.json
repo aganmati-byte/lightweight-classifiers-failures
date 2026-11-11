@@ -1,0 +1,50 @@
+{
+  "run_name": "EXCESS_TIERB_DAVIDE_20261110_R3",
+  "datasets": [
+    "cardiac_arrest_spain",
+    "depression_heart_failure",
+    "lung_cancer_icu",
+    "sepsis_sirs",
+    "ckd_uae",
+    "heart_failure_chicco"
+  ],
+  "n_splits": 50,
+  "n_retrain": 3,
+  "alert_budgets": [
+    0.1,
+    0.2
+  ],
+  "rf_parent": 128,
+  "rf_small": 16,
+  "gbm_parent": 400,
+  "gbm_small": 100,
+  "bootstrap": 500,
+  "gbm_backend": "lightgbm",
+  "targets": {
+    "cardiac_arrest_spain": [
+      "Exitus",
+      "1"
+    ],
+    "depression_heart_failure": [
+      "Death (1=Yes, 0=No)",
+      "1"
+    ],
+    "lung_cancer_icu": [
+      "Hospital_death",
+      "1"
+    ],
+    "sepsis_sirs": [
+      "Mortality",
+      "1"
+    ],
+    "ckd_uae": [
+      "EventCKD35",
+      "1"
+    ],
+    "heart_failure_chicco": [
+      "death_event",
+      "1"
+    ]
+  },
+  "protocol_version": "2026-11-10_tierB_v1"
+}

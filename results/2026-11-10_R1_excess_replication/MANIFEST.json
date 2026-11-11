@@ -1,0 +1,68 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-11-10T13:11:37.063454+00:00",
+  "config": {
+    "run_name": "EXCESS_REPLICATION_20261110_R1",
+    "quick_test": false,
+    "datasets": [
+      "physionet_2012",
+      "diabetes_130"
+    ],
+    "n_splits": 30,
+    "n_retrain": 3,
+    "alert_budgets": [
+      0.1,
+      0.2
+    ],
+    "rf_parent": 128,
+    "rf_small": 16,
+    "gbm_parent": 400,
+    "gbm_small": 100,
+    "bootstrap": 500,
+    "p2012_sets": [
+      "a",
+      "b"
+    ],
+    "gbm_backend": "lightgbm",
+    "split": "patient-grouped train 65% / validation 15% / test 20%",
+    "protocol_version": "2026-11-10_excess_v1"
+  },
+  "signature": "4a8fe6a8fee2dbf5",
+  "python": "3.13.18",
+  "sklearn": "1.6.1",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "data": {
+    "physionet_2012": {
+      "dataset": "PhysioNet/CinC Challenge 2012",
+      "task": "in-hospital mortality from first 48 h in ICU",
+      "sets_used": [
+        "a",
+        "b"
+      ],
+      "n_features": 80,
+      "group": "one ICU stay per record",
+      "n": 8000,
+      "events": 1122,
+      "prevalence": 0.1403,
+      "n_groups": 8000
+    },
+    "diabetes_130": {
+      "dataset": "UCI Diabetes 130-US Hospitals (296)",
+      "task": "30-day readmission at discharge",
+      "doi": "10.24432/C5230J",
+      "data_sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97",
+      "group": "patient_nbr",
+      "n": 99343,
+      "events": 11314,
+      "prevalence": 0.1139,
+      "n_groups": 69990
+    }
+  },
+  "limits": [
+    "Repeated splits re-use one cohort per dataset (correlated); NB-corrected intervals used",
+    "No external-site or temporal validation in this run",
+    "Alert budgets are illustrative, not clinically chosen",
+    "GBM truncated size is exact for LightGBM, proportional approximation otherwise"
+  ]
+}
