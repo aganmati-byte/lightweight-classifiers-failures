@@ -1,6 +1,6 @@
-# Lightweight classifiers and their failures
+# Lightweight supervised machine learning classifiers can miss data samples when applied to medical data
 
-Code, protocols and results for the article *Lightweight classifiers and their failures*
+Code, protocols and results for the article *Lightweight supervised machine learning classifiers can miss data samples when applied to medical data*
 (Abdelilah Ganmati, Davide Chicco; manuscript in preparation).
 
 **Question.** When a clinical classifier is made lighter (fewer trees, fewer boosting rounds),
