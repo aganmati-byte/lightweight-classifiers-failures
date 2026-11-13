@@ -82,7 +82,7 @@ matplotlib. Exact versions are recorded in each `MANIFEST.json`.
 
 ## Licence
 
-To be decided by the authors before the repository is made public.
+MIT License (see LICENSE).
 
 ## Contact
 
